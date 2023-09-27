@@ -1,0 +1,22 @@
+.filter {
+    margin-top: 70px;
+}
+
+.filter_category h2 {
+    font-weight: normal;
+}
+
+.filter_list {
+    list-style: none;
+    cursor: pointer;
+}
+
+.filter_link {
+    padding: 5px 0;
+}
+
+.filter_link.active {
+    color: #ccc;
+    width: 30px;
+    border-bottom: 1px solid #ccc;
+}

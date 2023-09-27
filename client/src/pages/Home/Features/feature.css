@@ -1,0 +1,35 @@
+.feature_container {
+    margin: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.feature_items {
+    background-color: #FFFAF0;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.feature_items > p {
+    margin: 10px 0;
+    font-weight: 700;
+    color: #2F4F4F;
+}
+
+/* Responsvie */
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    .feature_container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 50px 20px;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 600px) {}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {}

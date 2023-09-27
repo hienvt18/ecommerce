@@ -1,0 +1,139 @@
+header {
+    background-color: lightblue;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 20px;
+}
+
+.header_right {
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+}
+
+.header_navlink {
+    margin-left: 50px;
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+    transition: all 0.5s;
+}
+
+.header_navlink:hover {
+    color: #F0F8FF;
+}
+
+.header_action {
+    display: flex;
+    gap: 16px;
+}
+
+.header_login, .header_cart {
+    font-size: 28px;
+    color: #000;
+}
+
+.header_cart {
+    position: relative;
+}
+
+.header_quantity {
+    position: absolute;
+    top: -9px;
+    right: -11px;
+    font-size: 20px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 50%;
+    width: 1.25rem;
+    height: -0.75rem;
+}
+
+.avatar {
+    width: 35px;
+    border: 2px solid #cccccca8;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.header_account ul {
+    list-style: none;
+    cursor: pointer;
+    position: absolute;
+    top: 58px;
+    right: 82px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #fff;
+    z-index: 1;
+}
+
+.header_account li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.header_account li:hover {
+    background-color: #ccc;
+}
+
+
+/* Respoonsive */
+/* Desktop */
+@media only screen and (min-width: 768px) {}
+/* Tablet */
+@media only screen and (min-width: 600px) {
+    .header_dropMenu {
+        display: none;
+    }
+}
+
+/* Mobile */
+@media only screen and (max-width: 768px) {
+    .header_nav {
+        display: none;
+    }  
+
+    .header_dropMenu {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .header_showMenu {
+        position: absolute;
+        top: 81px;
+        left: 0;
+        z-index: 1;
+        background-color: #fff;
+        width: 100%;
+        height: 250px;
+        text-align: center;
+    }
+    
+    .header_navMobile {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .header_navlinkMobile {
+        color: #000;
+        text-decoration: none;
+        padding: 20px 0;
+        cursor: pointer;
+        transition: all 0.5s;
+        border-bottom: 1px solid #eee;
+    }
+
+    .header_navlinkMobile:hover {
+        background-color: #ccc;
+        color: #F0F8FF;
+    }
+}

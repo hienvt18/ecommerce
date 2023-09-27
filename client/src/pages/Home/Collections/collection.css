@@ -1,0 +1,119 @@
+.collection_container {
+    width: 85%;
+    margin: auto;
+}
+
+.collection_top {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.collection_title {
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+
+.collection_text {
+    color: #808080;
+}
+
+.collection_bottom {
+    display: grid;
+    gap: 30px;
+}
+
+.collection_items {
+    width: 100%;
+    min-width: 250px;
+    padding: 10px 12px;
+    margin: 15px 0;
+    border: 1px solid #cce7d0;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+    transition: all 0.5s;
+}
+
+.collection_items:hover {
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+}
+
+.collection_items img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.collection_desc {
+    padding: 10px 0;
+}
+
+.collection_desc span {
+    color: #606063;
+    font-size: 12px;
+}
+
+.collection_desc h5 {
+    padding: 7px 0;
+    color: #1a1a1a;
+    font-size: 18px;
+}
+
+.collection_star {
+    font-size: 14px;
+    color: rgb(243, 181, 25);
+}
+
+.collection_action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.collection_action h4 {
+    font-size: 18px;
+}
+
+.collection_action .collection_cart {
+    font-size: 25px;
+    color: #1a1a1a;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #e8f6ea;
+    font-weight: 500;
+    color: #088178;
+    border: 1px solid #cce7d0;
+    transition: all 0.5s;
+}
+
+.collection_action .collection_cart:hover {
+    background-color: #228B22;
+    color: #000;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+    .collection_bottom {
+        display: grid;
+        grid-template-columns: 1;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 600px) {
+    .collection_bottom {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+@media only screen and (min-width: 768px) {
+    .collection_bottom {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

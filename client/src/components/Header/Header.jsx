@@ -6,14 +6,20 @@ import { Link } from "react-router-dom"
 import { BiUserCircle } from "react-icons/bi"
 import { FiShoppingCart } from "react-icons/fi"
 import { AiOutlineMenu, AiOutlineClose, AiOutlineLogout } from "react-icons/ai"
-import { useSelector } from "react-redux"  
+import { useDispatch, useSelector } from "react-redux"  
 import { motion } from "framer-motion" 
+import { logout } from "../../redux/authSlice"
 
 const Header = () => {
+    const dispatch = useDispatch()
     const [ isOpen, setIsOpen ] = useState(false)
     const [ settingAccount, setSettingAccount ] = useState(false)
     const cartList = useSelector(state => state.cart.cartItems)
     const user = useSelector(state => state.auth.login.currentUser)
+
+    const handleLogOut = () => {
+        dispatch(logout())
+    }
 
     return (
         <header>
@@ -34,9 +40,9 @@ const Header = () => {
                                 <motion.img whileTap={{scale: 0.6}} onClick={() => setSettingAccount(!settingAccount)} className="avatar" src={avatar} alt="avatar" />
                                 {settingAccount && (
                                     <ul>
-                                        <li><AiOutlineLogout/>Log Out</li>
+                                        <li onClick={handleLogOut}><AiOutlineLogout/>Log Out</li>
                                     </ul>
-                                )}
+                                )}  
                             </div>
                         ) : (
                             <>

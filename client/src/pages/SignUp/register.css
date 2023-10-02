@@ -1,6 +1,8 @@
 .register-wrapper {
-    display: flex;
-    justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .register-container {
@@ -25,3 +27,17 @@
     align-self:center;
     color:rgb(255, 0, 55);
   }
+
+.register-btn {
+  margin-bottom: 10px;
+}
+
+.register-navigate {
+  color: #000;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+.register-navigate:hover {
+  color: #a4a4a4;
+}

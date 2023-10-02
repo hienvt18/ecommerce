@@ -56,6 +56,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            <div className="footer-bottom">
+                <p>Copyright &copy;2023 All rights reserved | This template is made with NameHz </p>
+            </div>
         </section>
     )
 }

@@ -1,11 +1,14 @@
 import "./cart.css"
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { removeCart, increaseQuantity, decreaseQuantity } from "../../redux/cartSlice"
 
+
 const CartList = () => {
     const dispatch = useDispatch()
+    const navigate = useNavigate()
     const cartItems = useSelector(state => state.cart.cartItems)
+    const user = useSelector(state => state.auth.login.currentUser)
 
     const handleIncrease = (item) => {
         dispatch(increaseQuantity(item._id))
@@ -17,6 +20,10 @@ const CartList = () => {
 
     const handleRemoveItem = (item) => {
         dispatch(removeCart(item._id))
+    }
+
+    const handleCheckOut = () => {
+        user !== null ? navigate("/checkout-success") : navigate("/login")
     }
 
     return (
@@ -55,7 +62,7 @@ const CartList = () => {
                                 <span>Subtotal</span>
                                 <span className="cart_amount">$ {cartItems.reduce((total, item) => total + item.price * item.quantity, 0)}</span>
                             </div>
-                            <Link to="/checkout" className="btn_checkout">Check Out</Link>
+                            <button onClick={handleCheckOut} className="btn_checkout">Check Out</button>
                         </div>
                     </div>
                 </>
